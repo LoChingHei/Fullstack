@@ -5,7 +5,7 @@ name: Tests
 # Controls when the workflow will run
 on:
   workflow_run:
-    workflows: ["Build"]
+    workflows: ["build"]
     types:
       -  completed
 
