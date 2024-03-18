@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Tests
+
+# Controls when the workflow will run
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      -  completed
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:  
+    runs-on: ubuntu-latest                 # this job will run on the latest version of Ubuntu
+    steps:                                  # list of steps that need to be taken when Unit Tests is triggered 
+    - uses: actions/checkout@v3             # check out code from repository
+    - name: Install dependencies            # install all dependencies needed for Unit Tests (ex. Jest) 
+      run: yarn install
+    - uses: actions/download-artifact@v3    # download compiled code from build and make it available for Unit Tests 
+      with:
+        path: dist
+    - name: Run Tests                       # run Unit Tests using Jest
+      run: yarn test 
