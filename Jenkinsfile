@@ -11,10 +11,7 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                // Build the Docker image
-                script {
-                    docker.build('ethereum-wallet-app', '-f Dockerfile .')
-                }
+                sh "docker build -t my-app-image ."
             }
         }
     }
