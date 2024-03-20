@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/LoChingHei/Fullstack.git'
             }
         }
 
@@ -31,15 +31,14 @@ pipeline {
             steps {
                 // Apply Terraform changes
                 script {
-                    sh 'terraform apply tfplan'
+                    sh 'terraform apply'
                 }
             }
         }
 
         stage('Deploy') {
             steps {
-                // Deploy your application (e.g., kubectl apply)
-                sh 'kubectl apply -f path/to/kubernetes/manifests'
+                sh 'kubectl apply -f ...'
             }
         }
     }
