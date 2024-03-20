@@ -1,6 +1,8 @@
 pipeline {
   agent any
-  stage('Clone repository') {               
+  stage{
+    stage('Clone repository') {               
       checkout scm    
       }    
+  }
 }
