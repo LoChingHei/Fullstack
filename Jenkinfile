@@ -1,0 +1,63 @@
+pipeline {
+    agent any
+
+    environment {
+        // Define environment variables
+        TF_WORKSPACE = 'aks-dev'
+        TF_VAR_resource_group_name = 'your-resource-group-name'
+        TF_VAR_kubernetes_cluster_name = 'your-aks-cluster-name'
+        TF_VAR_app_name = 'your-app-name'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from GitHub
+                git 'https://github.com/your-username/your-repo.git'
+            }
+        }
+
+        stage('Terraform Init') {
+            steps {
+                // Initialize Terraform
+                script {
+                    sh 'terraform init'
+                }
+            }
+        }
+
+        stage('Terraform Plan') {
+            steps {
+                // Plan Terraform changes
+                script {
+                    sh 'terraform plan -var="resource_group_name=$TF_VAR_resource_group_name" -var="kubernetes_cluster_name=$TF_VAR_kubernetes_cluster_name" -var="app_name=$TF_VAR_app_name" -out=tfplan'
+                }
+            }
+        }
+
+        stage('Terraform Apply') {
+            steps {
+                // Apply Terraform changes
+                script {
+                    sh 'terraform apply tfplan'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy your application (e.g., kubectl apply)
+                sh 'kubectl apply -f path/to/kubernetes/manifests'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Cleanup Terraform
+            script {
+                sh 'terraform destroy -auto-approve'
+            }
+        }
+    }
+}
