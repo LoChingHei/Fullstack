@@ -7,12 +7,10 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-
-        app = docker.build("getintodevops/hellonode")
-    }
+    stage('Build image') {         
+       
+            app = docker.build("Jenkins/test")    
+       }     
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
