@@ -1,45 +1,19 @@
 pipeline {
-    agent any
-
-
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/LoChingHei/Fullstack.git'
-            }
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
         }
-
-        stage('Terraform Init') {
-            steps {
-                // Initialize Terraform
-                script {
-                    sh 'terraform init'
-                }
-            }
-        }
-
-        stage('Terraform Plan') {
-            steps {
-                // Plan Terraform changes
-                script {
-                    sh 'terraform plan -var="resource_group_name=$TF_VAR_resource_group_name" -var="kubernetes_cluster_name=$TF_VAR_kubernetes_cluster_name" -var="app_name=$TF_VAR_app_name" -out=tfplan'
-                }
-            }
-        }
-
-        stage('Terraform Apply') {
-            steps {
-                // Apply Terraform changes
-                script {
-                    sh 'terraform apply'
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'kubectl apply -f ...'
-            }
-        }
+      }
     }
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
+        }
+      }
+    }
+  }
 }
