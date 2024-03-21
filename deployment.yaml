@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: walletapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: walletapp
+  template:
+    metadata:
+      labels:
+        name: walletapp
+    spec:
+      containers:
+        - name: app
+          image: kirillspitsyn220701/walletapp
+          ports:
+            - containerPort: 8080
