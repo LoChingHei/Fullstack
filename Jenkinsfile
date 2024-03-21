@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "kirillspitsyn220701/walletapp"
-    registryCredential = 'kirillspitsyn220701'
+    registryCredential = 'dockerHub'
     dockerImage = ''
   }
   agent any
