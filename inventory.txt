@@ -1,0 +1,2 @@
+[jenkins-server]
+nodejenkins ansible_user=root
