@@ -27,6 +27,12 @@ This is a simple implementation of a web based Ethereum wallet built with React,
 This is our demo for creating a docker container using Jenkins on an Ansible Node. 
 https://youtu.be/RmRqlQ-CyHY
 
+Other Demo Videos (Required George Brown email to access the demo videos)
+
+https://georgebrowncollege-my.sharepoint.com/:f:/g/personal/101486171_georgebrown_ca/EtKdMYuc5AxPhD6KK5m-sYUBwN-LSLV41TLQIBYjHHZ5XA?e=Kso8Ps
+
+
+
 ## ECR20 TOKEN - PlayoCoin (PLAYCN)
 
 The PLAYCN was created using Solidity ... openzeppelin... It's deployed to the Testnet on the Polygon network with 1000 total supply for demo sakes.
