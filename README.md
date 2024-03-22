@@ -31,6 +31,19 @@ Other Demo Videos (Required George Brown email to access the demo videos)
 
 https://georgebrowncollege-my.sharepoint.com/:f:/g/personal/101486171_georgebrown_ca/EtKdMYuc5AxPhD6KK5m-sYUBwN-LSLV41TLQIBYjHHZ5XA?e=Kso8Ps
 
+Terraform (Provisioning AKS)
+
+<img width="1395" alt="terraform 1" src="https://github.com/LoChingHei/Fullstack/assets/145512379/0b0b8c28-acd8-4783-a3b1-5fb99f47e353">
+<img width="1392" alt="terraform2" src="https://github.com/LoChingHei/Fullstack/assets/145512379/4a7eba1a-7767-4245-8df6-0e92df3eac9e">
+<img width="1394" alt="terraform3" src="https://github.com/LoChingHei/Fullstack/assets/145512379/9371a1b2-f32f-447f-8b70-75dee639e2a0">
+<img width="1390" alt="terraform4" src="https://github.com/LoChingHei/Fullstack/assets/145512379/6e247df2-5e9a-43b9-a932-dac8cda3ebcd">
+
+Apply VPA 
+
+<img width="1172" alt="vpa" src="https://github.com/LoChingHei/Fullstack/assets/145512379/e95a2ad3-1ad2-47bd-a800-a74d18e90647">
+<img width="1192" alt="vpa1" src="https://github.com/LoChingHei/Fullstack/assets/145512379/3ec94649-d324-45c9-b0fb-7969c273c7ef">
+<img width="668" alt="vpa2" src="https://github.com/LoChingHei/Fullstack/assets/145512379/68f2d5c9-d3c0-4844-acd5-9e14e6b51ca7">
+
 
 
 ## ECR20 TOKEN - PlayoCoin (PLAYCN)
